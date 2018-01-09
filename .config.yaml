@@ -1,0 +1,6 @@
+environment: local
+server: 
+  host: 127.0.0.1:8080
+db: 
+  mongo: 127.0.0.1:27017
+lang: 'en'

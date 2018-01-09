@@ -1,0 +1,171 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Test_places",
+		"_postman_id": "0e5f598f-9108-09ae-9f28-3a768801f31e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/places",
+			"request": {
+				"url": {
+					"raw": "http://localhost:8080/places?offset=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"places"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "limit",
+							"value": "10",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "rating",
+							"value": "desc",
+							"equals": true,
+							"description": "asc, desc",
+							"disabled": true
+						},
+						{
+							"key": "city",
+							"value": "Moscow",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 1\",\n\t\"rating\": 5,\n\t\"city\": \"Moscow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/places/:id",
+			"request": {
+				"url": "http://localhost:8080/places/5a54d7f82d1f121ce04300de",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 1\",\n\t\"rating\": 5,\n\t\"city\": \"Moscow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/places/:id/menu",
+			"request": {
+				"url": "http://localhost:8080/places/5a54d7f82d1f121ce04300de/menu",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 1\",\n\t\"rating\": 5,\n\t\"city\": \"Moscow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/places/:id",
+			"request": {
+				"url": "http://localhost:8080/places/5a548f162d1f12323c30a42b",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 1\",\n\t\"rating\": 5,\n\t\"city\": \"Moscow\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/places",
+			"request": {
+				"url": "http://localhost:8080/places",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 7\",\n\t\"rating\": 4,\n\t\"city\": \"Moscow\",\n\t\"menu\": [\n\t\t{\"name\": \"Ratatouille\", \"cost\": 300},\n\t\t{\"name\": \"Pilaf\", \"cost\": 200},\n\t\t{\"name\": \"Borscht\", \"cost\": 80}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "/places/:id",
+			"request": {
+				"url": "http://localhost:8080/places/5a548fee2d1f12127cf26404",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Restaurant 6\",\n\t\"rating\": 4,\n\t\"city\": \"New York\",\n\t\"menu\": [\n\t\t{\"name\": \"Ratatouille\", \"cost\": 300},\n\t\t{\"name\": \"Pilaf\", \"cost\": 200},\n\t\t{\"name\": \"Borscht\", \"cost\": 80}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
